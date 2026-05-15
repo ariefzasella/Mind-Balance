@@ -39,8 +39,9 @@
       </div>
     </div>
 
-    <div class="hero-image" style="width: 450px; height: 350px; position: relative; display: flex; justify-content: center; align-items: center; z-index: 10;">
-      <div style="width: 900px; height: 700px; transform: scale(0.5); transform-origin: center;">
+    <!-- PERBAIKAN: hapus semua inline style, ganti dengan class -->
+    <div class="hero-image">
+      <div class="dilemma-scale-wrapper">
         <div class="dilemma-box">
           <div class="stars-bg" id="stars-dilemma"></div>
           <div class="title-area">
@@ -178,9 +179,9 @@
   <section id="motivasi" class="fade-in">
     <div class="section-title"><h2>Motivasi Hari Ini</h2><p>Produktif itu baik, tetapi menjaga diri sendiri jauh lebih penting.</p></div>
     <div class="quote-container">
-      <div class="quote-box"><i class="fa-solid fa-quote-left"></i><p>“Istirahat bukan tanda kemalasan, tetapi bagian penting dari proses bertumbuh.”</p></div>
-      <div class="quote-box"><i class="fa-solid fa-quote-left"></i><p>“Buat apa belajar begadang terus tiap malam tapi ga immo. IMMO GA?”</p></div>
-      <div class="quote-box"><i class="fa-solid fa-quote-left"></i><p>“Belajar menghargai diri sendiri adalah bentuk produktivitas yang sehat.”</p></div>
+      <div class="quote-box"><i class="fa-solid fa-quote-left"></i><p>"Istirahat bukan tanda kemalasan, tetapi bagian penting dari proses bertumbuh."</p></div>
+      <div class="quote-box"><i class="fa-solid fa-quote-left"></i><p>"Buat apa belajar begadang terus tiap malam tapi ga immo. IMMO GA?"</p></div>
+      <div class="quote-box"><i class="fa-solid fa-quote-left"></i><p>"Belajar menghargai diri sendiri adalah bentuk produktivitas yang sehat."</p></div>
     </div>
   </section>
 
@@ -247,9 +248,9 @@
       let score = 0;
       checkboxes.forEach(cb => { if (cb.checked) score++; });
       hasilCheck.style.display = "flex"; setTimeout(() => { hasilCheck.style.opacity = "1"; }, 50);
-      if (score === 0) { teksHasil.innerHTML = "<strong>Kondisi Ideal!</strong> Keseimbangan hidupmu sangat baik. Pertahankan!"; hasilCheck.style.borderLeftColor = "#10b981"; hasilCheck.style.backgroundColor = "rgba(16, 185, 129, 0.1)"; ikonHasil.style.color = "#10b981"; ikonHasil.className = "fa-solid fa-face-smile-beam"; } 
-      else if (score <= 2) { teksHasil.innerHTML = "<strong>Gejala Ringan.</strong> Kamu mulai menunjukkan sedikit tanda. Luangkan waktu bersantai."; hasilCheck.style.borderLeftColor = "#f59e0b"; hasilCheck.style.backgroundColor = "rgba(245, 158, 11, 0.1)"; ikonHasil.style.color = "#f59e0b"; ikonHasil.className = "fa-solid fa-triangle-exclamation"; } 
-      else if (score <= 4) { teksHasil.innerHTML = "<strong>Peringatan!</strong> Indikasi cukup tinggi. Ingat, istirahat adalah kebutuhan!"; hasilCheck.style.borderLeftColor = "#ef4444"; hasilCheck.style.backgroundColor = "rgba(239, 68, 68, 0.1)"; ikonHasil.style.color = "#ef4444"; ikonHasil.className = "fa-solid fa-circle-exclamation"; } 
+      if (score === 0) { teksHasil.innerHTML = "<strong>Kondisi Ideal!</strong> Keseimbangan hidupmu sangat baik. Pertahankan!"; hasilCheck.style.borderLeftColor = "#10b981"; hasilCheck.style.backgroundColor = "rgba(16, 185, 129, 0.1)"; ikonHasil.style.color = "#10b981"; ikonHasil.className = "fa-solid fa-face-smile-beam"; }
+      else if (score <= 2) { teksHasil.innerHTML = "<strong>Gejala Ringan.</strong> Kamu mulai menunjukkan sedikit tanda. Luangkan waktu bersantai."; hasilCheck.style.borderLeftColor = "#f59e0b"; hasilCheck.style.backgroundColor = "rgba(245, 158, 11, 0.1)"; ikonHasil.style.color = "#f59e0b"; ikonHasil.className = "fa-solid fa-triangle-exclamation"; }
+      else if (score <= 4) { teksHasil.innerHTML = "<strong>Peringatan!</strong> Indikasi cukup tinggi. Ingat, istirahat adalah kebutuhan!"; hasilCheck.style.borderLeftColor = "#ef4444"; hasilCheck.style.backgroundColor = "rgba(239, 68, 68, 0.1)"; ikonHasil.style.color = "#ef4444"; ikonHasil.className = "fa-solid fa-circle-exclamation"; }
       else { teksHasil.innerHTML = "<strong>Waspada Burnout!</strong> Sangat disarankan segera mengambil jeda panjang untuk pemulihan."; hasilCheck.style.borderLeftColor = "#991b1b"; hasilCheck.style.backgroundColor = "rgba(153, 27, 27, 0.1)"; ikonHasil.style.color = "#991b1b"; ikonHasil.className = "fa-solid fa-skull-crossbones"; }
     });
 
