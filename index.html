@@ -39,7 +39,6 @@
       </div>
     </div>
 
-    <!-- PERBAIKAN: hapus semua inline style, ganti dengan class -->
     <div class="hero-image">
       <div class="dilemma-scale-wrapper">
         <div class="dilemma-box">
@@ -254,7 +253,7 @@
       else { teksHasil.innerHTML = "<strong>Waspada Burnout!</strong> Sangat disarankan segera mengambil jeda panjang untuk pemulihan."; hasilCheck.style.borderLeftColor = "#991b1b"; hasilCheck.style.backgroundColor = "rgba(153, 27, 27, 0.1)"; ikonHasil.style.color = "#991b1b"; ikonHasil.className = "fa-solid fa-skull-crossbones"; }
     });
 
-    // Easter Egg Logic
+    // Kelompok Logic
     const triggerEasterEgg = document.getElementById("easter-egg-trigger"), teamModal = document.getElementById("team-modal"), closeModal = document.getElementById("close-modal");
     triggerEasterEgg.addEventListener("click", () => teamModal.classList.add("active"));
     closeModal.addEventListener("click", () => teamModal.classList.remove("active"));
